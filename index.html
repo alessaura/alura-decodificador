@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criptografia</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .editable-text {
+      border: none; /* Remove a borda padrão */
+      outline: none; /* Remove o contorno ao focar */
+      padding: 8px; /* Adicione um preenchimento para melhorar a aparência */
+      font-size: 1.2rem; /* Tamanho da fonte */
+      display: inline-block; /* Garante que o elemento se comporte como bloco */
+      min-width: 200px; /* Define uma largura mínima para evitar que seja muito pequeno */
+      background-color: #F3F5FC; /* Cor de fundo para diferenciar */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+        <h1><a href="index.html"><img src="img/logo.png" alt="Logo"></a></h1>
+      <h2 id="text-input" class="editable-text" contenteditable="true" onclick="clearText()">Digite seu texto</h2>
+      <div class="info">
+        <p> Apenas letras minúsculas e sem acento.</p>
+      </div>
+      <div class="buttons">
+        <button class="button button-primary" id="encrypt-button">Criptografar</button>
+        <button class="button button-secondary" id="decrypt-button">Descriptografar</button>
+      </div>
+
+    </div>
+    <div class="right-section">
+      <img src="img\ilustra.svg" alt="Ilustração" id="illustration-section">
+      <p id="result-text" style="font-size: 12px;">
+        <strong>Nenhuma mensagem encontrada</strong> <br> 
+        Digite um texto que você deseja criptografar ou descriptografar. </p>
+     
+      <button class="button copy-button" id="copy-button" style="display: none;" onclick="copyText()">Copiar</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

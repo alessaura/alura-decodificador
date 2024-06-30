@@ -1,0 +1,231 @@
+/* Importe a fonte Inter se não estiver usando uma CDN */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Aplicação da fonte */
+body {
+  font-family: 'Inter', Arial, sans-serif; /* Prioriza Inter, fallback para Arial e sans-serif */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F3F5FC;
+  margin: 0;
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F3F5FC;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 1200px;
+  width: 100%;
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 30px;
+}
+
+.left-section h1 {
+  font-size: 3em;
+  color: #1a3e72;
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  margin-bottom: 0.5em;
+}
+
+.left-section h2 {
+  font-size: 1.5em;
+  color: #1a3e72;
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  margin-bottom: 0.5em;
+}
+
+.left-section .input-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.left-section .input-area label {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: #1a3e72;
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  display: block;
+}
+
+.left-section .input-area input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  margin-bottom: 10px;
+}
+
+.left-section .buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.left-section .button,
+.left-section .button-primary,
+.left-section .button-secondary,
+.copy-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Arredondamento de 8px */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 328px; /* Largura de 328px */
+  /* Adicionei essa propriedade para melhorar a acessibilidade */
+  text-decoration: none;
+}
+
+.left-section .button-primary {
+  background-color: #1a3e72;
+  color: #fff;
+}
+
+.left-section .button-secondary {
+  background-color: #dde1e7;
+  color: #1a3e72;
+}
+
+.left-section .button-primary:hover {
+  background-color: #14325a;
+}
+
+.left-section .button-secondary:hover {
+  background-color: #c0c6cf;
+}
+
+.left-section .info {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.right-section {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.right-section p {
+  font-size: 1.1em;
+  color: #6c757d;
+}
+
+.right-section p#result-text {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  overflow-y: auto;
+  max-height: 200px;
+  padding-right: 10px;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: 300px;
+  padding-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.copy-button {
+  display: inline-block;
+  padding: 8px 16px;
+  width: 300px;
+  margin: 8px 0px;
+  margin-top: auto; /* Coloca o botão no final do container */
+  margin-bottom: 32px; /* Distância de 32px do final */
+  border-radius: 8px;
+  border: 1px solid #0A3871;
+  background-color: transparent;
+  color: #0A3871;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: #0A3871;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .right-section {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .copy-button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .left-section .buttons {
+      flex-direction: column; /* Alterado para coluna para dispositivos móveis */
+    }
+    .left-section .button {
+      width: 100%; /* Largura de 100% para dispositivos móveis */
+      margin-bottom: 10px; /* Adicionei essa propriedade para adicionar espaço entre os botões */
+      padding: 8px 16px; /* Adicionei essa propriedade para igualar o padding do botão copiar */
+      width: 300px;
+    }
+    .right-section img {
+        display: none; /* Oculta a imagem no mobile */
+      }
+  }
+
+
+#result-text {
+  font-size: 1rem;
+}
